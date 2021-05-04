@@ -40,6 +40,10 @@ Park.prototype.totalNumberOfVisitors = function(){
     return total;
 };
 
+Park.prototype.totalNumberOfVisitorsPerYear = function(){
+    let dailyTotal = this.totalNumberOfVisitors()
+    return dailyTotal * 365
+}
 
 
 
