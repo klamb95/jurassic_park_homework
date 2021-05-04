@@ -41,10 +41,14 @@ Park.prototype.totalNumberOfVisitors = function(){
 };
 
 Park.prototype.totalNumberOfVisitorsPerYear = function(){
-    let dailyTotal = this.totalNumberOfVisitors()
+    let dailyTotal = this.totalNumberOfVisitors();
     return dailyTotal * 365
 }
 
+Park.prototype.totalRevenuePerYear = function(){
+    let yearlyTotal = this.totalNumberOfVisitorsPerYear();
+    return yearlyTotal * this.ticketPrice;
+};
 
 
 
