@@ -11,4 +11,14 @@ Park.prototype.numberOfDinos = function() {
 Park.prototype.addDino = function (dinosaur){
     this.dinosaurs.push(dinosaur);
 }
+
+Park.prototype.removeDino = function() {
+    this.dinosaurs.pop();
+}
+
+
+
+
+
+
 module.exports = Park;
