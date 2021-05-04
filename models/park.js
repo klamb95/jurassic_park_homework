@@ -18,8 +18,8 @@ Park.prototype.removeDino = function() {
 
 Park.prototype.dinoMostVistors = function() {
   let mostVistors = [];
-  for (currentDinosaur in this.dinosaurs) {
-      currentDinosaur.guestsAttractedPerDay.push(mostVistors);
+  for (dinosaur in this.dinosaurs) {
+      mostVistors.guestsAttractedPerDay.push(dinosaur);
 }};
 
 Park.prototype.findAllDinoBySpecies = function(species) {
@@ -32,6 +32,13 @@ Park.prototype.findAllDinoBySpecies = function(species) {
     return foundDinoSpecies.length;
 };
 
+Park.prototype.totalNumberOfVisitors = function(){
+    let total = 0;
+    for (const dinosaur of this.dinosaurs) {
+        total += dinosaur.guestsAttractedPerDay;
+    };
+    return total;
+};
 
 
 

@@ -57,11 +57,16 @@ describe('Park', function() {
     park.addDino(dinosaur1);
     park.addDino(dinosaur1);
     park.addDino(dinosaur2);
-    const actual = park.findAllDinoBySpecies('T-rex');
-    assert.strictEqual(actual, 2)
+    const actual = park.findAllDinoBySpecies('Velociraptor');
+    assert.strictEqual(actual, 1);
   });
 
-  it('should be able to calculate the total number of visitors per day');
+  it('should be able to calculate the total number of visitors per day', function(){
+    park.addDino(dinosaur1);
+    park.addDino(dinosaur2);
+    const actual = park.totalNumberOfVisitors();
+    assert.strictEqual(actual, 70)
+  });
 
   it('should be able to calculate the total number of visitors per year');
 
