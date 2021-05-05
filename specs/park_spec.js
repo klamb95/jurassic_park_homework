@@ -41,12 +41,13 @@ describe('Park', function() {
 
   it('should be able to remove a dinosaur from its collection', function() {
     park.addDino(dinosaur1);
-    park.removeDino();
+    park.addDino(dinosaur2);
+    park.removeDino(dinosaur1);
     const actual = park.numberOfDinos();
-    assert.strictEqual(actual,0);
+    assert.strictEqual(actual,1);
   });
 
-  xit('should be able to find the dinosaur that attracts the most visitors', function(){
+  it('should be able to find the dinosaur that attracts the most visitors', function(){
     park.addDino(dinosaur1);
     park.addDino(dinosaur2);
     const actual = park.dinoMostVistors();
